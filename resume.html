@@ -1,20 +1,3 @@
-<!--
-
-create a resume with the following areas: objectives, experience, education, skills
-
-
-
-At the top, right above her name create a set of links to go down to the other areas
-like so:
-
-objectives - experience - education - skills
-
-Bob A. Jones
-
-
-
-the area headers should also be another color (the same color), you pick it...
--->
 <!DOCTYPE html>
 <html lang="en" xmlns:th="www.thymeleaf.org">
 <head>
@@ -45,11 +28,25 @@ the area headers should also be another color (the same color), you pick it...
     font-family: sans-serif;
     color: dimgrey;
  }
+
+ h1#name{
+    text-align: center
+ }
+
+ h4#header{
+    text-align: center;
+ }
+
   </style>
 </head>
 <body>
 
-<h1>Objectives</h1>
+<h4 id="header"><a href="#objectives">objectives</a> -  <a href="#experience">experience</a> - <a href="#education">education</a> - <a href="#skills">skills</a></h4>
+<h1 id="name">Brandon Tait</h1>
+
+
+
+<h1 id="objectives">Objectives</h1>
 <ul>
     <li>Gain technical experience in software engineering role.</li>
     <li>Gain work experience in financial services industry.</li>
@@ -58,7 +55,7 @@ the area headers should also be another color (the same color), you pick it...
 </ul>
 <hr />
 
-<h1>Experience</h1>
+<h1 id="experience">Experience</h1>
 <h4>JP Morgan Chase & Co, <i>Software Engineering Summer Analyst</i> | Summer 2018</h4>
 <ul>
     <li>Developed interface that reduced onboarding time of new digital wallet providers</li>
@@ -85,7 +82,7 @@ the area headers should also be another color (the same color), you pick it...
 </ul>
 <hr />
 
-<h1>Education</h1>
+<h1 id="education">Education</h1>
 <h4>Howard University, <i>Computer Information Systems Major</i> | Graduation May 2019</h4>
 <ul>
     <li>"Capstone” university scholarship awarded for high school GPA and SAT score</li>
@@ -98,7 +95,7 @@ the area headers should also be another color (the same color), you pick it...
 
 <hr />
 
-<h1>Skills</h1>
+<h1 id="skills">Skills</h1>
 <p>Proficient in Java, Python, HTML, CSS, web development, agile methodologies, Ruby, ReactJS,
     angularJS, AWS, SQL, Spring, Javascript. Strong analytic, communication, research, planning, and
     organizational skills.</p>
